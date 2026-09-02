@@ -126,11 +126,6 @@ export const projects: Project[] = [
         alt: "Detailed compatibility analysis between Taurus and Pisces, with a 91% match score and category breakdown",
         caption: "Detaylı analiz",
       },
-      {
-        src: "/yildizname/share-card.png",
-        alt: "Share sheet for a daily reading card, with options for Instagram Stories, WhatsApp, and Facebook",
-        caption: "Yorumunu paylaş",
-      },
     ],
     stack: [
       "Kotlin Multiplatform",
