@@ -57,6 +57,12 @@ export interface Project {
   highlights?: string[];
   /** Optional short aside — an anecdote, or attribution on a team project. */
   note?: string;
+  /** Optional click-to-load YouTube demo, rendered between the description and the stack pills. */
+  video?: {
+    youtubeId: string;
+    /** Used as the iframe title and the facade's alt text. */
+    title: string;
+  };
   stack: string[];
   links: ProjectLink[];
 }
@@ -112,10 +118,7 @@ export const projects: Project[] = [
       "Railway",
       "Vercel",
     ],
-    links: [
-      { label: "GitHub", href: "https://github.com/KeremGobekcioglu/sprint-planner" },
-      { label: "Live app", href: "https://TODO-live-url" },
-    ],
+    links: [{ label: "GitHub", href: "https://github.com/KeremGobekcioglu/sprint-planner" }],
   },
   {
     title: "Smart Reading Assistant for Visually Impaired Users",
@@ -123,6 +126,10 @@ export const projects: Project[] = [
       "Glasses-mounted AI assistant that reads printed text aloud, in about 3–4 seconds, powered by Gemini.",
     description:
       "A wearable AI assistant that helps visually impaired users understand printed text — menus, documents, labels — just by asking out loud. Rather than aiming a phone at text, the camera is built into a glasses frame so it naturally follows where the user is looking; they press a button, ask a question, and hear a spoken answer in about 3–4 seconds, powered by Gemini 2.5 Flash. Built as a graduation project at Gebze Technical University.",
+    video: {
+      youtubeId: "DPq8-S-o64U",
+      title: "Smart Reading Assistant demo",
+    },
     stack: ["C++", "ESP32-CAM", "BLE", "Kotlin", "Jetpack Compose", "Hilt", "Retrofit", "Room", "Gemini 2.5 Flash"],
     links: [
       { label: "GitHub", href: "https://github.com/KeremGobekcioglu/SmartReadingAssistant" },

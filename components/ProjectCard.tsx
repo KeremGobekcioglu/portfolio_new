@@ -1,29 +1,15 @@
 import type { Project } from "@/content";
 import { Pill } from "./Pill";
-
-function getStatusLabel(project: Project): string | null {
-  const labels = project.links.map((link) => link.label.toLowerCase());
-  if (labels.some((label) => label.includes("google play"))) return "Live on Google Play";
-  if (labels.some((label) => label.includes("live"))) return "Live app";
-  if (labels.includes("github")) return "Open source";
-  return null;
-}
+import { ProjectVideo } from "./ProjectVideo";
 
 export function ProjectCard({ project }: { project: Project }) {
-  const status = getStatusLabel(project);
-
   return (
     <article>
-      <div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
-        <h3 className="font-serif text-xl">{project.title}</h3>
-        {status && (
-          <span className="ml-auto shrink-0 text-[0.75rem] uppercase tracking-wide text-accent dark:text-accent-dark">
-            {status}
-          </span>
-        )}
-      </div>
+      <h3 className="font-serif text-xl">{project.title}</h3>
       <p className="mt-1 text-muted dark:text-muted-dark">{project.summary}</p>
       <p className="mt-4 leading-[1.6] max-w-content">{project.description}</p>
+
+      {project.video && <ProjectVideo video={project.video} />}
 
       {project.highlights && project.highlights.length > 0 && (
         <ul className="mt-4 space-y-2 max-w-content list-disc pl-4 marker:text-muted dark:marker:text-muted-dark">
