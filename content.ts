@@ -4,6 +4,7 @@
 export interface Profile {
   name: string;
   positioning: string;
+  location: string;
   /** Each entry renders as its own paragraph. */
   about: string[];
 }
@@ -11,6 +12,7 @@ export interface Profile {
 export const profile: Profile = {
   name: "Kerem Göbekcioğlu",
   positioning: "Software Engineer | Android · Kotlin · Jetpack Compose | Backend (Spring Boot)",
+  location: "İstanbul, Türkiye",
   about: [
     "Software Engineer specializing in Android development, expanding into Kotlin Multiplatform and backend engineering with Spring Boot.",
     "I like understanding the systems and tools I use, not just what they do, but how they work. That's what lets me build software that's reliable, maintainable, and high-performing.",
@@ -39,8 +41,34 @@ export const links: SiteLink[] = [
   },
   {
     label: "Email",
-    href: "mailto:TODO@example.com",
+    href: "mailto:keremgobekcioglu54@gmail.com",
     icon: "mail",
+  },
+];
+
+export interface EducationItem {
+  institution: string;
+  degree: string;
+  dates: string;
+  location: string;
+  note?: string;
+}
+
+// Full detail kept here even though the sidebar only renders a shortened
+// form — useful if this grows into its own section later.
+export const education: EducationItem[] = [
+  {
+    institution: "Gebze Technical University",
+    degree: "BSc, Computer Engineering",
+    dates: "Sep 2020 – Jun 2026",
+    location: "Gebze, Kocaeli, Turkey",
+  },
+  {
+    institution: "Gdańsk University of Technology",
+    degree: "Data Engineering",
+    dates: "Feb 2023 – Jun 2023",
+    location: "Gdańsk, Poland",
+    note: "Erasmus+ exchange semester.",
   },
 ];
 
@@ -63,7 +91,7 @@ export interface Project {
     /** Used as the iframe title and the facade's alt text. */
     title: string;
   };
-  /** Optional row of app screenshots, rendered after the highlights and before the stack pills. */
+  /** Optional row of phone-app screenshots (fixed 9:19.5 frames), rendered after the highlights and before the stack pills. */
   screenshots?: {
     src: string;
     alt: string;
@@ -117,7 +145,7 @@ export const projects: Project[] = [
     links: [
       { label: "Google Play", href: "https://play.google.com/store/apps/details?id=com.kg.yildizname" },
       { label: "Landing page", href: "https://yildiznamepage.vercel.app/" },
-      { label: "GitHub", href: "https://github.com/TODO-repo-url" },
+      { label: "GitHub", href: "https://github.com/KeremGobekcioglu/horoscope-app" },
     ],
   },
   {

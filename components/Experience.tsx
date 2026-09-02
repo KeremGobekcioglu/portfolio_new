@@ -22,7 +22,7 @@ export function Experience() {
               </p>
               <ul className="mt-3 space-y-2 max-w-content list-disc pl-4 marker:text-muted dark:marker:text-muted-dark">
                 {item.highlights.map((point) => (
-                  <li key={point} className="leading-[1.6]">
+                  <li key={point} className="leading-[1.65]">
                     {point}
                   </li>
                 ))}

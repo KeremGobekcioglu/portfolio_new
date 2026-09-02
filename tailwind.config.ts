@@ -32,7 +32,7 @@ const config: Config = {
         sans: ["var(--font-body)", "system-ui", "sans-serif"],
       },
       maxWidth: {
-        content: "640px",
+        content: "700px",
       },
       typography: {
         DEFAULT: {

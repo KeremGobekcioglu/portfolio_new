@@ -9,7 +9,7 @@ export function About() {
         <SectionHeading id="about-heading">About</SectionHeading>
         <div className="space-y-4 max-w-content">
           {profile.about.map((paragraph) => (
-            <p key={paragraph} className="leading-[1.6]">
+            <p key={paragraph} className="leading-[1.65]">
               {paragraph}
             </p>
           ))}

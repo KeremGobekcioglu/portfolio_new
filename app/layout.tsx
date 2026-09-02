@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Fraunces, Inter } from "next/font/google";
 import "./globals.css";
 import { profile } from "@/content";
-import { ThemeToggle } from "@/components/ThemeToggle";
 
 // Applies a previously chosen dark theme before first paint, avoiding a
 // light-then-dark flash. The site otherwise always defaults to light.
@@ -48,7 +47,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en" className={`${fraunces.variable} ${inter.variable}`} suppressHydrationWarning>
       <body className="font-sans">
         <script dangerouslySetInnerHTML={{ __html: noFlashThemeScript }} />
-        <ThemeToggle />
         {children}
       </body>
     </html>

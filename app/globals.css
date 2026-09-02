@@ -16,7 +16,7 @@
     @apply min-h-screen bg-bg text-ink dark:bg-bg-dark dark:text-ink-dark antialiased;
     font-feature-settings: "cv11", "ss01";
     font-size: 1.0625rem;
-    line-height: 1.6;
+    line-height: 1.65;
   }
 
   ::selection {
@@ -59,33 +59,6 @@
       opacity: 1;
       transform: none;
       transition: none;
-    }
-  }
-
-  /*
-   * Lets project media (screenshots, video) escape the 640px text column to
-   * the right, without escaping the viewport. Below the breakpoint it's a
-   * no-op — the element keeps whatever width its own classes already give it
-   * (normally max-w-content, matching the text column).
-   *
-   * Reads --container-max/--container-pad/--sidebar-width/--sidebar-gap from
-   * app/page.tsx (set once there, on the page's outer container) rather than
-   * duplicating those numbers here, so this stays correct if that layout
-   * changes.
-   */
-  .media-bleed {
-    --band-right-gutter: 3rem;
-    --band-max-width: 920px;
-  }
-
-  @media (min-width: 1024px) {
-    .media-bleed {
-      --media-left-offset: calc(
-        max(0px, (100vw - var(--container-max)) / 2) + var(--container-pad) + var(--sidebar-width) +
-          var(--sidebar-gap)
-      );
-      width: min(var(--band-max-width), calc(100vw - var(--media-left-offset) - var(--band-right-gutter)));
-      max-width: none;
     }
   }
 }

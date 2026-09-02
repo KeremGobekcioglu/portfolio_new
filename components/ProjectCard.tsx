@@ -8,14 +8,14 @@ export function ProjectCard({ project }: { project: Project }) {
     <article>
       <h3 className="font-serif text-xl">{project.title}</h3>
       <p className="mt-1 text-muted dark:text-muted-dark">{project.summary}</p>
-      <p className="mt-4 leading-[1.6] max-w-content">{project.description}</p>
+      <p className="mt-4 leading-[1.65] max-w-content">{project.description}</p>
 
       {project.video && <ProjectVideo video={project.video} />}
 
       {project.highlights && project.highlights.length > 0 && (
         <ul className="mt-4 space-y-2 max-w-content list-disc pl-4 marker:text-muted dark:marker:text-muted-dark">
           {project.highlights.map((point) => (
-            <li key={point} className="leading-[1.6]">
+            <li key={point} className="leading-[1.65]">
               {point}
             </li>
           ))}
@@ -27,7 +27,7 @@ export function ProjectCard({ project }: { project: Project }) {
       )}
 
       {project.note && (
-        <p className="mt-4 text-sm text-muted dark:text-muted-dark border-l-2 border-line dark:border-line-dark pl-4 max-w-content leading-[1.6]">
+        <p className="mt-4 text-sm text-muted dark:text-muted-dark border-l-2 border-line dark:border-line-dark pl-4 max-w-content leading-[1.65]">
           {project.note}
         </p>
       )}

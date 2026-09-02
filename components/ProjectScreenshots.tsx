@@ -17,16 +17,16 @@ const staticImagesBySrc: Record<string, StaticImageData> = {
 
 export function ProjectScreenshots({ screenshots }: { screenshots: NonNullable<Project["screenshots"]> }) {
   return (
-    <div className="media-bleed mt-6 mb-6 w-full max-w-content">
-      <div className="flex gap-6 overflow-x-auto snap-x snap-mandatory pb-1 lg:overflow-visible lg:snap-none lg:pb-0">
+    <div className="mt-6 mb-6 max-w-content">
+      <div className="flex gap-4 overflow-x-auto snap-x snap-mandatory pb-1 md:overflow-visible md:snap-none md:pb-0">
         {screenshots.map((shot) => (
-          <figure key={shot.src} className="w-[60vw] shrink-0 snap-start lg:w-auto lg:flex-1 lg:shrink">
+          <figure key={shot.src} className="w-[60vw] shrink-0 snap-start md:w-auto md:flex-1 md:shrink">
             <div className="relative aspect-[9/19.5] overflow-hidden rounded-[14px] border border-line dark:border-line-dark">
               <Image
                 src={staticImagesBySrc[shot.src] ?? shot.src}
                 alt={shot.alt}
                 fill
-                sizes="(max-width: 1024px) 60vw, 300px"
+                sizes="(max-width: 767px) 60vw, 225px"
                 quality={90}
                 className="object-cover"
               />
