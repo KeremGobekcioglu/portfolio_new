@@ -20,7 +20,7 @@ const inter = Inter({
   display: "swap",
 });
 
-const siteUrl = "https://TODO-your-domain.vercel.app";
+const siteUrl = "https://keremgobekcioglu.vercel.app";
 const title = `${profile.name} — ${profile.positioning}`;
 const description = profile.positioning;
 
