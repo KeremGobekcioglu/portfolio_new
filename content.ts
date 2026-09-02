@@ -126,6 +126,11 @@ export const projects: Project[] = [
         alt: "Detailed compatibility analysis between Taurus and Pisces, with a 91% match score and category breakdown",
         caption: "Detaylı analiz",
       },
+      {
+        src: "/yildizname/calendar.png",
+        alt: "Monthly zodiac calendar for August 2026 with daily indicators and a summary of the month ahead",
+        caption: "Burç takvimi",
+      },
     ],
     stack: [
       "Kotlin Multiplatform",

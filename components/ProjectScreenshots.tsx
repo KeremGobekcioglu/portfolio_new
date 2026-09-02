@@ -3,6 +3,7 @@ import type { Project } from "@/content";
 
 import yildiznameDailyReading from "../public/yildizname/daily-reading.png";
 import yildiznameCompatDetail from "../public/yildizname/compat-detail.png";
+import yildiznameCalendar from "../public/yildizname/calendar.png";
 
 // content.ts keeps `src` as a plain public/ URL string (so the content layer
 // stays framework-agnostic); this maps those strings to statically-imported
@@ -11,6 +12,7 @@ import yildiznameCompatDetail from "../public/yildizname/compat-detail.png";
 const staticImagesBySrc: Record<string, StaticImageData> = {
   "/yildizname/daily-reading.png": yildiznameDailyReading,
   "/yildizname/compat-detail.png": yildiznameCompatDetail,
+  "/yildizname/calendar.png": yildiznameCalendar,
 };
 
 export function ProjectScreenshots({ screenshots }: { screenshots: NonNullable<Project["screenshots"]> }) {
