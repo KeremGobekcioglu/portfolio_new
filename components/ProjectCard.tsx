@@ -1,6 +1,7 @@
 import type { Project } from "@/content";
 import { Pill } from "./Pill";
 import { ProjectVideo } from "./ProjectVideo";
+import { ProjectScreenshots } from "./ProjectScreenshots";
 
 export function ProjectCard({ project }: { project: Project }) {
   return (
@@ -19,6 +20,10 @@ export function ProjectCard({ project }: { project: Project }) {
             </li>
           ))}
         </ul>
+      )}
+
+      {project.screenshots && project.screenshots.length > 0 && (
+        <ProjectScreenshots screenshots={project.screenshots} />
       )}
 
       {project.note && (

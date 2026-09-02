@@ -63,6 +63,13 @@ export interface Project {
     /** Used as the iframe title and the facade's alt text. */
     title: string;
   };
+  /** Optional row of app screenshots, rendered after the highlights and before the stack pills. */
+  screenshots?: {
+    src: string;
+    alt: string;
+    /** 1–3 words, Turkish, matching the app's own on-screen labels. */
+    caption: string;
+  }[];
   stack: string[];
   links: ProjectLink[];
 }
@@ -79,6 +86,23 @@ export const projects: Project[] = [
       "TypeScript Cloud Functions backend that enriches templated horoscope data using the Gemini API on a schedule, with retry and model-fallback logic for quota and timeout failures.",
       "Push notifications on both platforms from scratch, Firebase Anonymous Auth, and per-user Firestore security rules.",
       "Native sharing that renders horoscope cards to PNG and shares them directly to Instagram Stories via platform intents.",
+    ],
+    screenshots: [
+      {
+        src: "/yildizname/daily-reading.png",
+        alt: "Daily horoscope screen for Capricorn, showing the zodiac constellation and the day's reading",
+        caption: "Günlük yorum",
+      },
+      {
+        src: "/yildizname/compat-detail.png",
+        alt: "Detailed compatibility analysis between Taurus and Pisces, with a 91% match score and category breakdown",
+        caption: "Detaylı analiz",
+      },
+      {
+        src: "/yildizname/share-card.png",
+        alt: "Share sheet for a daily reading card, with options for Instagram Stories, WhatsApp, and Facebook",
+        caption: "Yorumunu paylaş",
+      },
     ],
     stack: [
       "Kotlin Multiplatform",
