@@ -13,14 +13,14 @@ export default function Home() {
         <main className="max-w-content">
           <About />
           <div className="mt-24">
+            <Experience />
+          </div>
+          <div className="mt-24">
             <Projects />
           </div>
           {/* Slightly less than the 6rem major-section gap — reads as a coda to Projects, not a peer section. */}
           <div className="mt-20">
             <OtherWork />
-          </div>
-          <div className="mt-24">
-            <Experience />
           </div>
           <Footer />
         </main>
